@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json({ limit: '6mb' }));
 app.use(express.static('public'));
 
+// API route for image analysis
 app.post('/api/analyze', async (req, res) => {
   const { imageBase64 } = req.body;
   
@@ -34,7 +35,10 @@ app.post('/api/analyze', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-  app.get('/', (req, res) => {
+});
+
+// Root route for serving your index.html
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
