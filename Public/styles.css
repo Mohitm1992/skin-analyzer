@@ -1,0 +1,107 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #222;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Layout */
+.hero {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: #673ab7;
+  color: #fff;
+}
+
+.container {
+  flex: 1;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.capture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+video,
+#preview {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button,
+input[type="file"] {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button {
+  background: #3f51b5;
+  color: #fff;
+}
+
+button:disabled {
+  background: #9fa8da;
+  cursor: not-allowed;
+}
+
+.preview {
+  object-fit: cover;
+}
+
+.results {
+  margin-top: 2rem;
+}
+
+.loader {
+  animation: pulse 1s infinite alternate;
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Helpers */
+.hidden {
+  display: none;
+}

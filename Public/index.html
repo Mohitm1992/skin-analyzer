@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Skin Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Facial Skin Analysis</h1>
+    <p>Capture or upload a clear selfie and receive personalised insights.</p>
+  </header>
+
+  <main class="container">
+    <section class="capture">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas" class="hidden"></canvas>
+
+      <div class="controls">
+        <button id="startCam">📷 Open Camera</button>
+        <button id="snap" disabled>📸 Take Photo</button>
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+
+      <img id="preview" class="preview hidden" alt="Image preview" />
+    </section>
+
+    <section class="results hidden" id="results">
+      <h2>Analysis Summary</h2>
+      <pre id="summaryOut"></pre>
+
+      <h2>Recommendations</h2>
+      <pre id="recommendOut"></pre>
+
+      <div id="loader" class="loader">Analyzing…</div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Educational prototype – not a medical device.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
