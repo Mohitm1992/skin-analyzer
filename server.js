@@ -34,6 +34,8 @@ app.post('/api/analyze', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+  app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 const PORT = process.env.PORT || 8080;
